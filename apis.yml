@@ -1,0 +1,30 @@
+aid: hoppscotch
+name: Hoppscotch
+segments:
+  - Clients
+description: >-
+  Hoppscotch is a lightweight open-source browser-based API client supporting REST, GraphQL, WebSockets, SSE, and MQTT.
+type: Index
+position: Consumer
+access: 3rd-Party
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - Clients
+created: '2026-03-03'
+modified: '2026-03-03'
+url: https://raw.githubusercontent.com/api-evangelist/hoppscotch/refs/heads/main/apis.yml
+specificationVersion: '0.19'
+apis:
+  - aid: hoppscotch:hoppscotch
+    name: Hoppscotch
+    description: >-
+      Hoppscotch is a lightweight open-source browser-based API client supporting REST, GraphQL, WebSockets, SSE, and MQTT.
+    humanURL: https://example.com
+    tags:
+      - Clients
+    properties:
+      - type: Documentation
+        url: https://example.com
+maintainers:
+  - FN: Kin Lane
+    email: info@apievangelist.com
