@@ -9,13 +9,13 @@ position: Consumer
 access: 3rd-Party
 image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
 tags:
-  - Clients
   - API Testing
-  - Open Source
+  - Clients
   - GraphQL
-  - WebSockets
-  - REST
+  - Open Source
   - Platform
+  - REST
+  - WebSockets
 created: '2026-03-03'
 modified: '2026-03-16'
 url: https://raw.githubusercontent.com/api-evangelist/hoppscotch/refs/heads/main/apis.yml
@@ -31,15 +31,15 @@ apis:
       clients.
     humanURL: https://hoppscotch.com
     tags:
-      - Clients
       - API Testing
+      - Clients
+      - Collaboration
+      - GraphQL
+      - MQTT
       - Open Source
       - REST
-      - GraphQL
-      - WebSockets
       - SSE
-      - MQTT
-      - Collaboration
+      - WebSockets
     properties:
       - type: Documentation
         url: https://docs.hoppscotch.io
