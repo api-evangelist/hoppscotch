@@ -2,13 +2,13 @@
   "repo": "hoppscotch",
   "feeds": [
     {
-      "source": "https://hoppscotch.com/blog",
-      "feed_url": "",
+      "source": "https://docs.hoppscotch.io/documentation/self-host/getting-started",
+      "feed_url": "https://docs.hoppscotch.io/documentation/self-host/getting-started",
       "title": "",
       "saved": 0,
-      "error": "no_feed"
+      "method": "none"
     }
   ],
-  "fetched": "2026-05-17T20:48:52Z",
+  "fetched": "2026-06-01T23:35:02Z",
   "post_count": 0
 }
