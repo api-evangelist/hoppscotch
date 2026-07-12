@@ -50,6 +50,8 @@ apis:
   - url: graphql/hoppscotch-graphql.md
     type: GraphQL
 common:
+- type: DomainSecurity
+  url: security/hoppscotch-domain-security.yml
 - type: Website
   url: https://hoppscotch.com
 - type: About
