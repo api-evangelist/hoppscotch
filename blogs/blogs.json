@@ -2,12 +2,6 @@
   "repo": "hoppscotch",
   "feeds": [
     {
-      "source": "https://hoppscotch.com/blog",
-      "feed_url": "",
-      "saved": 0,
-      "method": "agent-scrape"
-    },
-    {
       "source": "https://docs.hoppscotch.io/documentation/self-host/getting-started",
       "feed_url": "https://docs.hoppscotch.io/documentation/self-host/getting-started",
       "title": "",
@@ -16,6 +10,6 @@
     }
   ],
   "post_count": 0,
-  "fetched": "2026-06-27T12:47:03Z",
+  "fetched": "2026-07-11T11:50:51Z",
   "agent_pulled": "2026-06-27"
 }
