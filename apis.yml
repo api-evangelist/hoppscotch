@@ -24,6 +24,14 @@ tags:
 - API Testing
 - Clients
 - GraphQL
+- Open-Source
+- Platform
+- REST
+- WebSockets
+tags_raw:
+- API Testing
+- Clients
+- GraphQL
 - Open Source
 - Platform
 - REST
@@ -43,6 +51,16 @@ apis:
     clients.
   humanURL: https://hoppscotch.com
   tags:
+  - API Testing
+  - Clients
+  - Collaboration
+  - GraphQL
+  - MQTT
+  - Open-Source
+  - REST
+  - SSE
+  - WebSockets
+  tags_raw:
   - API Testing
   - Clients
   - Collaboration
