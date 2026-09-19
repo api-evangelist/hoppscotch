@@ -38,7 +38,7 @@ tags:
 - Open-Source
 - Platform
 - REST
-- WebSockets
+- WebSocket
 tags_raw:
 - API Testing
 - Clients
@@ -70,7 +70,7 @@ apis:
   - Open-Source
   - REST
   - SSE
-  - WebSockets
+  - WebSocket
   tags_raw:
   - API Testing
   - Clients
