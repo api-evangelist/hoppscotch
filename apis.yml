@@ -91,6 +91,8 @@ apis:
   - url: graphql/hoppscotch-graphql.md
     type: GraphQL
 common:
+- type: VendorFacets
+  url: vendor-facets/hoppscotch-vendor-facets.yml
 - type: DomainSecurity
   url: security/hoppscotch-domain-security.yml
 - type: Website

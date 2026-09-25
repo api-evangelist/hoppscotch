@@ -1,0 +1,222 @@
+# Vendor facets — Hoppscotch. An open-source API client (web, desktop, CLI, self-hostable) that
+# publishes collection docs to a public link, embeds runnable requests as widgets, runs hosted mock
+# servers and, since v2026.5.0, exports collections as OpenAPI 3.1. Those can earn documentation,
+# console and contract checks once the provider declares them; its collection format and its MCP
+# server (which drives Hoppscotch itself) earn nothing.
+vendor: hoppscotch
+name: Hoppscotch
+website: https://hoppscotch.io
+areas:
+- api-collections
+registry_keys: []
+rubric_schema_version: 0.22.0
+generated: '2026-09-25'
+features_refreshed: '2026-09-25'
+basis: capability
+summary: >-
+  Hoppscotch can put three things a provider owns in front of the score: published collection docs, embeddable
+  request widgets that let a reader run a call from the provider's own page, and an OpenAPI 3.1 export
+  that creates a contract where only a collection existed. All three count only once the provider publishes
+  and declares them, and the generated contract is only as complete as the collection. A Hoppscotch collection
+  is not a Postman collection, so postman_present is not in reach, and its MCP server gives agents Hoppscotch,
+  not the provider's API.
+features:
+- id: published-docs
+  name: API documentation published from collections
+  description: >-
+    Generates docs from a collection with code snippets, example responses, markdown, versions and an
+    environment selector, published to a public link and auto-synced.
+  source: https://docs.hoppscotch.io/documentation/features/documentation.md
+  tier: all
+- id: widgets
+  name: Widgets (links, buttons, embeds)
+  description: >-
+    Embeds a shared request in an HTML page as a link, button, or a mini Hoppscotch so visitors can run
+    it.
+  source: https://docs.hoppscotch.io/documentation/features/widgets.md
+  tier: all
+- id: mock-servers
+  name: API mock servers
+  description: >-
+    Mock servers built from scratch or a collection, returning configured status, headers, body and latency
+    at a mock server URL.
+  source: https://docs.hoppscotch.io/documentation/features/mock.md
+  tier: all
+- id: openapi-31-export
+  name: OpenAPI 3.1 collection export
+  description: Collections export as OpenAPI 3.1 documents (v2026.5.0).
+  source: https://hoppscotch.com/blog/hoppscotch-v2026-5-0
+  tier: all
+- id: collections
+  name: Collections import and export
+  description: >-
+    Collections import from and export to Hoppscotch, OpenAPI and Postman sources; the page does not say
+    which export targets are offered.
+  source: https://docs.hoppscotch.io/documentation/features/collections.md
+  tier: all
+- id: hoppscotch-mcp
+  name: Hoppscotch MCP server
+  description: >-
+    A local stdio MCP server (npx @hoppscotch/mcp-server) that gives an agent the user's Hoppscotch collections,
+    environments and teams.
+  source: https://docs.hoppscotch.io/documentation/clients/mcp-server/overview.md
+  tier: all
+maps:
+- feature: published-docs
+  check: documentation_present
+  layer: composite
+  provider_must: >-
+    Publish the docs (Hoppscotch Cloud link or a self-hosted instance) and declare the URL as Documentation.
+  note: A request-by-request reference; a provider that already has a docs site gains nothing.
+  catalog_pass_rate: 0.453
+  facet: developer_ergonomics
+  points: 4
+  baseline_pass_rate: 0.95
+  saturated: true
+  saturated_note: >-
+    95% of providers with a contract, docs and a reference already earn this; the vendor cannot move it
+    for most of its buyers.
+- feature: widgets
+  check: console_or_sandbox
+  layer: composite
+  provider_must: Embed the widgets on a page the provider controls and declare that page as Console or
+    Playground.
+  catalog_pass_rate: 0.089
+  facet: developer_ergonomics
+  points: 3
+  baseline_pass_rate: 0.332
+- feature: openapi-31-export
+  check: contract_present
+  layer: composite
+  creates_artifact: true
+  provider_must: Publish the exported OpenAPI where the provider controls it and register it in apis.yml.
+  note: >-
+    Creates a contract for a collection-only provider. Downstream contract_quality checks score what the
+    collection carried, which is usually thin on descriptions, schemas and error responses.
+  catalog_pass_rate: 0.31
+  facet: contract_quality
+  points: 20
+  baseline_pass_rate: 0.949
+  saturated: true
+  saturated_note: >-
+    95% of providers with a contract, docs and a reference already earn this; the vendor cannot move it
+    for most of its buyers.
+- feature: openapi-31-export
+  check: openapi_3_1
+  layer: composite
+  conditional: true
+  condition: >-
+    Only if the provider publishes the exported 3.1 document as its contract rather than an older hand-written
+    one.
+  catalog_pass_rate: 0.414
+  facet: contract_quality
+  points: 5
+  baseline_pass_rate: 0.411
+- feature: published-docs
+  check: openapi_examples
+  layer: agent_readiness
+  grade: documented
+  partial: true
+  partial_note: >-
+    The docs show example responses, but the dimension reads examples inside the OpenAPI first; a docs
+    page reaches only the Examples-link fallback (0.25).
+  points: 7
+  baseline_pass_rate: 0.36
+earns_nothing:
+- feature: collections
+  check: postman_present
+  why: >-
+    The check reads Postman-typed pointers only; a Hoppscotch collection or published docs link is not
+    one. The fetched page does not confirm a Postman-format export.
+- feature: hoppscotch-mcp
+  check: mcp_server
+  layer: agent_readiness
+  why: >-
+    It exposes Hoppscotch's own workspace to an agent, run locally; it is not an MCP server for the provider's
+    API.
+- feature: mock-servers
+  check: console_or_sandbox
+  why: >-
+    Already reached through widgets; a mock of hand-typed responses adds nothing a second time and is
+    not the API.
+out_of_reach:
+  checks:
+  - llms_txt_published
+  - sdk_count_1
+  - cli_present
+  - agent_skill_present
+  - change_log_present
+  note: >-
+    Nothing on the fetched pages writes an llms.txt, SDK, provider CLI, Agent Skill or changelog for the
+    provider; doc versions are labels, not a change log.
+surface:
+  contract_quality:
+    reachable: 25.0
+    total: 211
+  developer_ergonomics:
+    reachable: 7.0
+    total: 42
+  agent_readiness:
+    reachable: 1.8
+    total: 139
+hard_rule: >-
+  A model, not a score. Adopting this vendor changes a provider's Kin Score only when the provider publishes
+  the resulting artifacts on its own surface; nothing here writes a score, and no sponsorship or partnership
+  can.
+method: searched
+source:
+- https://docs.hoppscotch.io/documentation/clients/mcp-server/overview.md
+- https://docs.hoppscotch.io/documentation/features/collections.md
+- https://docs.hoppscotch.io/documentation/features/documentation.md
+- https://docs.hoppscotch.io/documentation/features/mock.md
+- https://docs.hoppscotch.io/documentation/features/widgets.md
+- https://hoppscotch.com/blog/hoppscotch-v2026-5-0
+measured:
+  cohort:
+    method: vendors-catalog.json detections (CNAME / header / URL shape / markup), never a name match
+    detected: 0
+    in_baseline: 0
+  control:
+    basis: providers earning contract_present + documentation_present + api_reference_present, minus the
+      cohort
+    n: 5216
+  metric: >-
+    cohort_pct / control_pct = mean share of the check's points earned (derived and platform credit weighted),
+    x100
+  measured_on: '2026-09-25'
+  status: 'not measurable: 0 detected customers clear the baseline (need 20)'
+simulation:
+  simulated_on: '2026-09-25'
+  rubric: 0.23.0
+  population: providers publishing a contract (contract_present earned), replayable exactly
+  providers: 8977
+  providers_unreplayable: 987
+  providers_moved: 8010
+  conditional_rows: excluded (they depend on what the API already does)
+  composite_lift:
+    median: 1.4
+    p75: 1.5
+    p90: 3.3
+    max: 6.4
+    mean_among_movers: 1.8
+  agent_readiness_lift:
+    median: 1.2
+    p75: 1.3
+    p90: 1.3
+    max: 1.5
+    mean_among_movers: 1.3
+  facet_lift_median_among_movers:
+    developer_ergonomics: 7.2
+    contract_quality: 10.2
+  composite_band_moves:
+    thin -> developing: 566
+    developing -> strong: 195
+    emerging -> thin: 180
+    strong -> exemplar: 47
+    minimal -> emerging: 3
+  agent_readiness_band_moves:
+    agent-aware -> agent-ready: 201
+    agent-ready -> agent-native: 28
+  method: >-
+    each provider's own kin/checks file, the vendor's maps at their stated credit, the scorer's composite
+    formula; from -> to, nothing written
