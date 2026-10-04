@@ -6,15 +6,21 @@ description: >-
   Hoppscotch is a lightweight open-source browser-based API client supporting REST, GraphQL, WebSockets, SSE, and MQTT.
 type: Index
 deliveryModel:
-  model: saas
-  open_source: false
+  model: open-core
+  license: MIT
+  license_evidence:
+    repo: hoppscotch/hoppscotch
+    spdx: MIT
+    stars: 80508
+  open_source: true
   commercial: true
   callable_host: false
-  label: Hosted service · you call their endpoint
+  label: Open core · an OSS project plus a commercial hosted product
   confidence: medium
   source:
   - pricing
-  generated: '2026-08-28'
+  - repository-license
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: freemium
@@ -31,11 +37,14 @@ accessModel:
 position: Consuming
 access: 3rd-Party
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/hoppscotch.png
+x-docs-platform: mintlify
+x-docs-platform-confidence: medium
+x-docs-platform-checked: 2026-10-03
 tags:
 - API Testing
 - Clients
 - GraphQL
-- Open-Source
+- Open Source
 - Platform
 - REST
 - WebSocket
@@ -47,6 +56,7 @@ tags_raw:
 - Platform
 - REST
 - WebSockets
+- Open-Source
 created: '2026-03-03'
 modified: '2026-04-28'
 url: https://raw.githubusercontent.com/api-evangelist/hoppscotch/refs/heads/main/apis.yml
@@ -67,7 +77,7 @@ apis:
   - Collaboration
   - GraphQL
   - MQTT
-  - Open-Source
+  - Open Source
   - REST
   - SSE
   - WebSocket
@@ -81,6 +91,7 @@ apis:
   - REST
   - SSE
   - WebSockets
+  - Open-Source
   properties:
   - type: Documentation
     url: https://docs.hoppscotch.io
