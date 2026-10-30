@@ -1,4 +1,4 @@
-# Hoppscotch (hoppscotch)
+# Hoppscotch
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,68 +66,123 @@
 
 Hoppscotch is a lightweight open-source browser-based API client supporting REST, GraphQL, WebSockets, SSE, and MQTT.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/hoppscotch/refs/heads/main/apis.yml)
+**Areas:** API Testing · Clients · GraphQL · Open Source · Platform · REST · WebSocket
 
-## Scope
+## Hoppscotch on APIs.io
 
-- **Type:** Index 
-- **Position:** Consuming 
-- **Access:** 3rd-Party 
+Everything profiled for Hoppscotch is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/hoppscotch/](https://apis.io/providers/hoppscotch/)** — or go straight to one of the APIs or properties below.
 
-## Tags:
+### APIs (1)
 
- - Clients, API Testing, Open Source, GraphQL, WebSockets, REST, Platform
+- [Hoppscotch](https://apis.io/apis/hoppscotch/hoppscotch/) — Hoppscotch is a lightweight open-source browser-based API client supporting REST, GraphQL, WebSockets, SSE, and MQTT. It provides a minimalist, web-based…
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-03-03 
-- **Modified:** 2026-03-16 
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### GraphQL (1)
 
-### Hoppscotch
-Hoppscotch is a lightweight open-source browser-based API client supporting REST, GraphQL, WebSockets, SSE, and MQTT. It provides a minimalist, web-based API development suite with real-time collaboration, environment variables, collections, and test scripting across web, desktop, and CLI clients.
+GraphQL schemas.
 
-**Human URL:** [https://hoppscotch.com](https://hoppscotch.com)
+- [Hoppscotch GraphQL API](https://apis.io/graphqls/hoppscotch/hoppscotch-graphql/)
 
+#### MCP servers (1)
 
-#### Tags:
+Model Context Protocol servers that expose the API to agents.
 
- - Clients, API Testing, Open Source, REST, GraphQL, WebSockets, SSE, MQTT, Collaboration
+- [Moved to /providers/hoppscotch/](https://apis.io/servers/hoppscotch/hoppscotch/)
 
-#### Properties
+#### Security (1)
 
-- [Documentation](https://docs.hoppscotch.io)
-- [GettingStarted](https://docs.hoppscotch.io/documentation/getting-started/introduction)
-- [GitHubOrg](https://github.com/hoppscotch)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Hoppscotch Domain Security](https://apis.io/security/hoppscotch/hoppscotch-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Hoppscotch Plans Pricing](https://apis.io/plans/hoppscotch/hoppscotch-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Hoppscotch Rate Limits](https://apis.io/rate-limits/hoppscotch/hoppscotch-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [Hoppscotch Finops](https://apis.io/finops/hoppscotch/hoppscotch-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://hoppscotch.com)
-- [About](https://hoppscotch.com/company)
-- [Pricing](https://hoppscotch.com/pricing)
 - [Documentation](https://docs.hoppscotch.io)
-- [GettingStarted](https://docs.hoppscotch.io/documentation/getting-started/introduction)
-- [SelfHost](https://docs.hoppscotch.io/documentation/self-host/getting-started)
-- [Blog](https://hoppscotch.com/blog)
-- [ChangeLog](https://hoppscotch.com/changelog)
-- [Releases](https://hoppscotch.com/releases)
-- [Status](https://status.hoppscotch.io)
+- [Getting started](https://docs.hoppscotch.io/documentation/getting-started/introduction)
+- [Pricing](https://hoppscotch.com/pricing)
 - [Support](https://docs.hoppscotch.io/support/getting-started/introduction)
-- [FAQ](https://docs.hoppscotch.io/support/getting-started/faq)
-- [GitHub](https://github.com/hoppscotch/hoppscotch)
-- [CLI](https://docs.hoppscotch.io/documentation/clients/cli/overview)
-- [Downloads](https://hoppscotch.com/download)
-- [TermsOfService](https://docs.hoppscotch.io/support/terms)
-- [PrivacyPolicy](https://docs.hoppscotch.io/support/privacy)
+- [Changelog](https://hoppscotch.com/changelog)
+- [Blog](https://hoppscotch.com/blog)
 - [Security](https://docs.hoppscotch.io/support/security-policy)
-- [Discord](https://discord.com/invite/GAMWxmR)
-- [Twitter](https://twitter.com/hoppscotch_io)
-- [LinkedIn](https://www.linkedin.com/company/hoppscotch)
-- [SignUp](https://hoppscotch.io)
+- [Terms of service](https://docs.hoppscotch.io/support/terms)
+- [Privacy policy](https://docs.hoppscotch.io/support/privacy)
+- [Status](https://status.hoppscotch.io)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
+**Kin Score 29.4** — thin · rubric 0.25.0 · scored 2026-10-23
 
-**Email:** kin@apievangelist.com
+| Facet | Score |
+|---|---|
+| Discoverability | 58.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 47.4 |
+| Developer ergonomics | 35.7 |
+| Access clarity | 52.6 |
+
+**Agent readiness 11.2** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 13.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/hoppscotch/](https://apis.io/providers/hoppscotch/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Hoppscotch: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/hoppscotch/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
